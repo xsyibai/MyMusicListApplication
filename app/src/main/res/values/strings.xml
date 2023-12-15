@@ -3,21 +3,17 @@
     <string name="login">登录</string>
     <string name="register">注册</string>
     <string name="account">账户:</string>
-    <string name="password">密码:</string>
+    <string name="password">密码</string>
+    <string name="passwordCheck">确认密码</string>
     <string name="logout">退出</string>
-    <string name="login_tips">账户或密码不能为空</string>
+    <string name="loginNullTips">账户或密码不能为空</string>
+    <string name="register_error">注册失败!</string>
+    <string name="checkPasswordError">两次密码不一致!</string>
     <string name="shop">购物商城</string>
     <string name="singer">歌手</string>
     <string name="songName">音乐名称</string>
     <string name="musicList">音乐列表</string>
     <string name="playing">正在播放</string>
     <string name="search">搜索</string>
-    <string name="weather">天气</string>
-    <string name="cityName">城市名称</string>
-    <string name="temperature">温度</string>
-    <string name="wind">风力</string>
-    <string name="weatherSum">晴</string>
-    <string name="Beijing">北京</string>
-    <string name="QuanZhou">泉州</string>
-    <string name="XiaMen">厦门</string>
+    <string name="authError">账号或密码错误</string>
 </resources>

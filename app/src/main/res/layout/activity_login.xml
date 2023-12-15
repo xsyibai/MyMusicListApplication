@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!-- 圆形头像 -->
+    <ImageView
+        android:id="@+id/userHeader"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/user_header"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_image_background"
+        />
+
+    <!-- 用户名输入框 -->
+    <EditText
+        android:id="@+id/userText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:hint="请输入账户"
+        android:textSize="20sp"/>
+
+    <!-- 密码输入框 -->
+    <EditText
+        android:id="@+id/lgPasswordText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:hint="请输入密码"
+        android:textSize="20sp"
+        android:inputType="textPassword"/>
+
+    <!-- 按钮区域 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/registerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textColor="#0f0f0f"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+            app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

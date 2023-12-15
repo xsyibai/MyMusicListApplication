@@ -34,7 +34,6 @@ public class PlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
         Intent intent = new Intent(this, MusicService.class);
-//        startService(intent);
         MusicServiceConnection musicServiceConnection = new MusicServiceConnection();
         bindService(intent, musicServiceConnection, Context.BIND_AUTO_CREATE);
         musicService = musicServiceConnection.getMusicService();
