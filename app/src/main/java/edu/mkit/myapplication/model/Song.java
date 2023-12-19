@@ -1,6 +1,11 @@
 package edu.mkit.myapplication.model;
 
-public class Song {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+public class Song implements Parcelable {
 
     private String name; //歌曲名
     private String singer; //歌手
@@ -8,12 +13,58 @@ public class Song {
     private int duration; //歌曲时间长度
     private String path; //歌曲地址
 
+    private int currentProgress; // 播放进度
+
     public Song(String name, String singer, long size, int duration, String path) {
         this.name = name;
         this.singer = singer;
         this.size = size;
         this.duration = duration;
         this.path = path;
+    }
+
+    protected Song(Parcel in) {
+        name = in.readString();
+        singer = in.readString();
+        size = in.readLong();
+        duration = in.readInt();
+        path = in.readString();
+        currentProgress = in.readInt();
+    }
+
+    public static final Creator<Song> CREATOR = new Creator<Song>() {
+        @Override
+        public Song createFromParcel(Parcel in) {
+            return new Song(in);
+        }
+
+        @Override
+        public Song[] newArray(int size) {
+            return new Song[size];
+        }
+    };
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel parcel, int i) {
+
+        parcel.writeString(name);
+        parcel.writeString(singer);
+        parcel.writeLong(size);
+        parcel.writeInt(duration);
+        parcel.writeString(path);
+        parcel.writeInt(currentProgress);
+    }
+
+    public int getCurrentProgress() {
+        return currentProgress;
+    }
+
+    public void setCurrentProgress(int currentProgress) {
+        this.currentProgress = currentProgress;
     }
 
     @Override
@@ -69,4 +120,6 @@ public class Song {
     public void setPath(String path) {
         this.path = path;
     }
+
+
 }

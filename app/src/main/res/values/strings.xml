@@ -7,7 +7,8 @@
     <string name="passwordCheck">确认密码</string>
     <string name="logout">退出</string>
     <string name="loginNullTips">账户或密码不能为空</string>
-    <string name="register_error">注册失败!</string>
+    <string name="registerError">注册失败!</string>
+    <string name="registerSuccess">注册成功!</string>
     <string name="checkPasswordError">两次密码不一致!</string>
     <string name="shop">购物商城</string>
     <string name="singer">歌手</string>

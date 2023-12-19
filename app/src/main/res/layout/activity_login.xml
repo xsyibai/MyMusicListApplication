@@ -18,7 +18,7 @@
 
     <!-- 用户名输入框 -->
     <EditText
-        android:id="@+id/userText"
+        android:id="@+id/userName_Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -29,7 +29,7 @@
 
     <!-- 密码输入框 -->
     <EditText
-        android:id="@+id/lgPasswordText"
+        android:id="@+id/password_Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -46,7 +46,7 @@
         android:layout_marginTop="30dp">
 
         <Button
-            android:id="@+id/loginBtn"
+            android:id="@+id/login_Btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/login"
@@ -58,15 +58,15 @@
             app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
-            android:id="@+id/registerBtn"
+            android:id="@+id/register_Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/register"
             android:textColor="#0f0f0f"
             android:textSize="20sp"
             android:layout_marginTop="30dp"
-            app:layout_constraintTop_toBottomOf="@+id/loginBtn"
-            app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+            app:layout_constraintTop_toBottomOf="@+id/login_Btn"
+            app:layout_constraintEnd_toEndOf="@+id/login_Btn"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
